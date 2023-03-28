@@ -1,0 +1,9 @@
+Для связи с БД используем SequelizeModule
+Устанавки в npm :
+
+npm install --save @nestjs/sequelize sequelize sequelize-typescript
+npm install --save pg pg-hstore
+npm install --save-dev @types/sequelize
+
+Доп инфа в документации неста :
+https://docs.nestjs.com/techniques/database#sequelize-integration
