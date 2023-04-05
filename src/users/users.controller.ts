@@ -1,9 +1,9 @@
 import { Body, Controller, Delete, Get, Param, Post, Put, UseGuards } from '@nestjs/common';
 import { IsAuthor } from 'src/auth/author.guard';
-import { RoleOrAuthor } from 'src/auth/compose.guard';
-import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
-import { Roles } from 'src/auth/role-auth.decorator';
-import { RolesGuard } from 'src/auth/role.guard';
+import { RoleOrAuthor } from '../auth/compose.guard';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';
+import { Roles } from '../auth/role-auth.decorator';
+import { RolesGuard } from '../auth/role.guard';
 import { AddRoleDto } from './dto/add-role.dto';
 import { UsersService } from './users.service';
 

@@ -1,4 +1,4 @@
-import { Body, Controller, Param, Post, Put, UseGuards } from '@nestjs/common';
+import { Body, Controller, HttpCode, Param, Post, Put, UseGuards } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { RoleOrAuthor } from './compose.guard';
 import { LoginDto } from './dto/login.dto';
@@ -12,12 +12,13 @@ export class AuthController {
     constructor(private authService : AuthService){}
 
     @Post('/login')
+    @HttpCode(200)
     login(@Body() loginDto : LoginDto){
         return this.authService.login(loginDto);
     }
 
     @Post('/registration')
-    registration(@Body() registrationDto : RegistrationDto){        
+    registration(@Body() registrationDto : RegistrationDto){                
         return this.authService.registration(registrationDto);
     }
 

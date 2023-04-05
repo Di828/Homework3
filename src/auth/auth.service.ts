@@ -2,12 +2,12 @@ import { Injectable } from '@nestjs/common';
 import { HttpStatus } from '@nestjs/common/enums';
 import { HttpException, UnauthorizedException } from '@nestjs/common/exceptions';
 import { JwtService } from '@nestjs/jwt/dist';
-import { ProfilesService } from 'src/profiles/profiles.service';
-import { UsersService } from 'src/users/users.service';
+import { ProfilesService } from '../profiles/profiles.service';
+import { UsersService } from '../users/users.service';
 import { LoginDto } from './dto/login.dto';
 import { RegistrationDto } from './dto/regestration.dto';
 import * as bcrypt from 'bcryptjs';
-import { User } from 'src/users/user.model';
+import { User } from '../users/user.model';
 import { UpdateDto } from './dto/update.dto';
 
 @Injectable()

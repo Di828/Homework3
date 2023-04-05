@@ -1,8 +1,8 @@
 import { Body, Controller, Delete, Get, Param, Post, Put, UploadedFile, UseGuards, UseInterceptors } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
-import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
-import { Roles } from 'src/auth/role-auth.decorator';
-import { RolesGuard } from 'src/auth/role.guard';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';
+import { Roles } from '../auth/role-auth.decorator';
+import { RolesGuard } from '../auth/role.guard';
 import { AddTextblockDto } from './dto/addtextblock.dto';
 import { TextblockService } from './textblock.service';
 

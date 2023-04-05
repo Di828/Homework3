@@ -1,7 +1,7 @@
 import { forwardRef, Module } from '@nestjs/common';
 import { SequelizeModule } from '@nestjs/sequelize';
-import { AuthModule } from 'src/auth/auth.module';
-import { FilesModule } from 'src/files/files.module';
+import { AuthModule } from '../auth/auth.module';
+import { FilesModule } from '../files/files.module';
 import { TextblockController } from './textblock.controller';
 import { Textblock } from './textblock.model';
 import { TextblockService } from './textblock.service';

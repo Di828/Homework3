@@ -2,7 +2,7 @@ import { ExecutionContext, HttpException, HttpStatus, Injectable } from '@nestjs
 //import { JwtService } from '@nestjs/jwt';
 import { InjectModel } from '@nestjs/sequelize';
 import { Op } from 'sequelize';
-import { RolesService } from 'src/roles/roles.service';
+import { RolesService } from '../roles/roles.service';
 import { AddRoleDto } from './dto/add-role.dto';
 import { CreateUserDto } from './dto/create-user.dto';
 import { User } from './user.model';
