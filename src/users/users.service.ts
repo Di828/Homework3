@@ -1,5 +1,5 @@
 import { ExecutionContext, HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import { JwtService } from '@nestjs/jwt';
+//import { JwtService } from '@nestjs/jwt';
 import { InjectModel } from '@nestjs/sequelize';
 import { Op } from 'sequelize';
 import { RolesService } from 'src/roles/roles.service';
