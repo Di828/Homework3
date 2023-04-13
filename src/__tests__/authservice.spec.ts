@@ -113,6 +113,37 @@ describe('AuthService tests', () => {
     .expect(401);           
   })
 
+  const newRole = {value : 'RoleForTest', description : 'Test role'}
+  let createdRole;
+  it(`Add role newRole`,async () => {
+    const response = await request(app.getHttpServer())
+    .post('/roles')
+    .send(newRole)
+    .expect(201); 
+    
+    createdRole = response.body;
+  })
+
+  it(`Get role by value`,async () => {
+    const response = await request(app.getHttpServer())
+    .get(`/roles/${newRole.value}`)
+    .expect(200);
+
+    expect(response.body).toEqual(createdRole);
+  })  
+
+  it(`Delete role newRole`,async () => {
+    const response = await request(app.getHttpServer())
+    .delete(`/roles/${newRole.value}`)
+    .expect(200);
+   })  
+
+   it('Get role by incorrect value',async () => {
+    const response = await request(app.getHttpServer())
+    .get(`/roles/${newRole.value}`)
+    .expect(404);
+  })
+
   afterAll(async () => {    
     await app.close();
   });
